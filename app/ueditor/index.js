@@ -1,8 +1,8 @@
-const VERSION = '1.4.3';
+const VERSION = '1.4.2';
 
-const loadUEditor = async (callback = () => {}) => {
-  await import(`./${VERSION}/ueditor.config`);
-  await import(`./${VERSION}/ueditor.all`).then(() => {
+const loadUEditor = (callback = () => {}) => {
+  import(`./${VERSION}/ueditor.config`);
+  import(`./${VERSION}/ueditor.all`).then(() => {
     callback(UE, VERSION);
   });
 };
