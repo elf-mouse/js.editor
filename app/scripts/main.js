@@ -10,11 +10,6 @@ loadUEditor((UE, v) => {
   });
   let uEditorHomeUrl = ue.getOpt('UEDITOR_HOME_URL');
 
-  submit.addEventListener('click', () => {
-    let html = ue.getContent();
-    console.log(html);
-  });
-
   UE.registerUI('dialog', (editor, uiName) => {
     let btn = new UE.ui.Button({
       name: 'xiumi',
@@ -39,5 +34,10 @@ loadUEditor((UE, v) => {
     });
 
     return btn;
+  });
+
+  submit.addEventListener('click', () => {
+    let html = ue.getContent();
+    console.log(html);
   });
 });
