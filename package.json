@@ -1,0 +1,14 @@
+{
+  "name": "ueditor-test",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "gulp --silent",
+    "prod": "gulp --silent --production"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "balm": "0.20.2",
+    "gulp": "^3.9.1"
+  }
+}
