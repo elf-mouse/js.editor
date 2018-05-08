@@ -3,6 +3,13 @@
 var balm = require('balm');
 
 balm.config = {
+  server: {
+    proxyContext: ['/ueditor/1.4.3/php', '/ueditor/1.4.2/php'],
+    proxyOptions: {
+      target: 'http://demo.com', // Target host
+      changeOrigin: true // Needed for virtual hosted sites
+    }
+  },
   roots: {
     source: 'app'
   },

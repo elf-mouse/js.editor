@@ -1,4 +1,6 @@
-const VERSION = '1.4.2';
+const VERSION = '1.4.3';
+
+window.UEDITOR_HOME_URL = `/ueditor/${VERSION}/`;
 
 const loadUEditor = (callback = () => {}) => {
   import(`./${VERSION}/ueditor.config`);

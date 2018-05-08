@@ -3,12 +3,9 @@ import loadUEditor from '../ueditor';
 const submit = document.getElementById('submit');
 
 loadUEditor((UE, v) => {
-  let ue = UE.getEditor('container', {
-    UEDITOR_HOME_URL: `/ueditor/${v}/`,
-    serverUrl: 'api/upload'
-    // catchRemoteImageEnable: true // For ueditor@1.4.3
-  });
+  let ue = UE.getEditor('container');
   let uEditorHomeUrl = ue.getOpt('UEDITOR_HOME_URL');
+  console.log('UEDITOR_HOME_URL', uEditorHomeUrl);
 
   UE.registerUI('dialog', (editor, uiName) => {
     let btn = new UE.ui.Button({

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome to BalmJS</title>
+  <link rel="stylesheet" href="%PUBLIC_URL%/styles/main.css">
+  <style>
+  .edui-button.edui-for-xiumi-connect .edui-button-wrap .edui-button-body .edui-icon {
+    background-image: url("http://xiumi.us/connect/ue/xiumi-connect-icon.png") !important;
+    background-size: contain;
+  }
+  </style>
+</head>
+
+<body>
+  <div>
+    <script type="text/plain" id="container" name="content">这里写你的初始化内容</script>
+    <p>
+      <button type="button" id="submit">提交</button>
+    </p>
+  </div>
+
+  <script>var UEDITOR_HOME_URL = '/ueditor/1.4.3/';</script>
+  <script src="/ueditor/1.4.3/ueditor.config.js"></script>
+  <script src="/ueditor/1.4.3/ueditor.all.js"></script>
+  <script src="/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
+
+  <script>
+    UE.registerUI('dialog', function(editor, uiName) {
+      var btn = new UE.ui.Button({
+        name: 'xiumi-connect',
+        title: '秀米',
+        onclick: function() {
+          var dialog = new UE.ui.Dialog({
+              iframeUrl: UEDITOR_HOME_URL + 'dialogs/xiumi/xiumi.html',
+              editor: editor,
+              name: 'xiumi-connect',
+              title: '秀米图文消息助手',
+              cssRules: 'width: ' + (window.innerWidth - 60) + 'px;' + 'height: ' + (window.innerHeight - 60) + 'px;'
+          });
+          dialog.render();
+          dialog.open();
+        }
+      });
+
+      return btn;
+    });
+
+    var ue = UE.getEditor('container');
+  </script>
+</body>
+
+</html>
