@@ -13,13 +13,6 @@ balm.config = {
   roots: {
     source: 'app'
   },
-  paths: {
-    source: {
-      css: 'styles',
-      js: 'scripts',
-      img: 'images'
-    }
-  },
   styles: {
     ext: 'css', // Default use PostCSS
     autoprefixer: ['last 1 version']
