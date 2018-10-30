@@ -7,8 +7,15 @@
     "prod": "gulp --silent --production"
   },
   "devDependencies": {
-    "babel-eslint": "^9.0.0",
+    "babel-eslint": "^8.2.6",
     "balm": "0.23.13",
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "vue-loader": "^15.4.2",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "dependencies": {
+    "quill": "0.20.1",
+    "vue": "^2.5.17",
+    "wangeditor": "2.1.23"
   }
 }
