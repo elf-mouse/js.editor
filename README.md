@@ -48,3 +48,10 @@ function createPreviewVideo(url){
     }
 }
 ```
+
+## Rich editor for Vue
+
+- quill
+- wangEditor (TODO)
+
+> `quill@0.20.x` and `wangeditor@2.x.x` For IE9+
