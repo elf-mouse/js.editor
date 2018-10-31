@@ -57,8 +57,7 @@ export default {
   },
   data() {
     return {
-      $editor: null,
-      currentContent: this.content
+      $editor: null
     };
   },
   mounted() {
@@ -89,8 +88,7 @@ export default {
         let html = this.$refs.editor.children[0].innerHTML;
         if (html === '<p><br></p>') html = '';
 
-        this.currentContent = html;
-        this.$emit(EDITOR_EVENT, this.currentContent);
+        this.$emit(EDITOR_EVENT, html);
       });
     }
   }

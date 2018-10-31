@@ -11,7 +11,8 @@
         Upload
       </ui-file>
     </div>
-    <quill-editor v-model="content"></quill-editor>
+    <!-- <quill-editor v-model="content"></quill-editor> -->
+    <wang-editor v-model="content" :config="config"></wang-editor>
     <button type="button" @click="submit">Submit</button>
     <hr>
     <p>Preview:</p>
@@ -26,15 +27,23 @@
 
 <script>
 import QuillEditor from '../components/quill-editor';
+import WangEditor from '../components/wang-editor';
 
 export default {
   components: {
-    QuillEditor
+    QuillEditor,
+    WangEditor
   },
   data() {
     return {
       content: '',
-      files: []
+      files: [],
+      config: {
+        // 下面两个配置，使用其中一个即可显示“上传图片”的tab。但是两者不要同时使用！！！
+        // uploadImgShowBase64: true, // 使用 base64 保存图片
+        uploadImgServer: '/upload', // 上传图片到服务器
+        showLinkImg: false
+      }
     }
   },
   methods: {
