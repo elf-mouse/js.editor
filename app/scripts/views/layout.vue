@@ -1,23 +1,21 @@
 <template>
   <div>
-    <div id="toolbar">
-      <!-- Add buttons as you would before -->
+    <!-- <div id="toolbar">
       <button class="ql-bold"></button>
       <button class="ql-italic"></button>
       <button class="ql-link"></button>
       <button class="ql-image"></button>
-      <!-- But you can also add your own -->
       <ui-file accept="image/*" @change="onChange">
         Upload
       </ui-file>
-    </div>
+    </div> -->
     <!-- <quill-editor v-model="content"></quill-editor> -->
     <wang-editor v-model="content" :config="config"></wang-editor>
     <button type="button" @click="submit">Submit</button>
-    <hr>
+    <hr />
     <p>Preview:</p>
     <pre v-html="content"></pre>
-    <hr>
+    <hr />
     <p>Upload Info:</p>
     <div v-if="files.length">
       {{ files }}

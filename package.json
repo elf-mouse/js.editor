@@ -1,22 +1,22 @@
 {
-  "name": "ueditor-test",
+  "name": "richeditor-test",
   "version": "1.0.0",
-  "private": true,
   "scripts": {
-    "dev": "gulp --silent",
-    "prod": "gulp --silent --production"
-  },
-  "devDependencies": {
-    "babel-eslint": "^8.2.6",
-    "balm": "0.23.13",
-    "gulp": "^3.9.1",
-    "vue-loader": "^15.4.2",
-    "vue-template-compiler": "^2.5.17"
+    "dev": "gulp -S",
+    "prod": "gulp -S -p"
   },
   "dependencies": {
-    "balm-ui-lite": "^1.4.1",
-    "quill": "^1.3.6",
-    "vue": "^2.5.17",
+    "balm-ui": "^6.6.1",
+    "quill": "^1.3.7",
+    "vue": "^2.6.11",
     "wangeditor": "^3.1.1"
-  }
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "balm": "^2.13.1",
+    "gulp": "^4.0.2",
+    "vue-loader": "^15.9.2",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "private": true
 }

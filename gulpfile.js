@@ -1,22 +1,21 @@
-// Documentation - http://balmjs.com/docs/en/configuration/toc.html
-// 中文文档 - http://balmjs.com/docs/zh-cn/configuration/toc.html
-var balm = require('balm');
-var VueLoaderPlugin = require('vue-loader/lib/plugin');
+const path = require('path');
+const balm = require('balm');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
+// Documentation - https://balmjs.com/docs/v2/config/
+// 中文文档 - https://balmjs.com/docs/v2/zh/config/
 balm.config = {
   server: {
-    proxyContext: ['/ueditor/1.4.3/php', '/ueditor/1.4.2/php'],
-    proxyOptions: {
-      target: 'http://demo.com', // Target host
-      changeOrigin: true // Needed for virtual hosted sites
+    proxyConfig: {
+      context: ['/ueditor/1.4.3/php', '/ueditor/1.4.2/php'],
+      options: {
+        target: 'http://demo.com',
+        changeOrigin: true
+      }
     }
   },
   roots: {
     source: 'app'
-  },
-  styles: {
-    ext: 'css', // Default use PostCSS
-    autoprefixer: ['last 1 version']
   },
   scripts: {
     entry: {
@@ -30,7 +29,8 @@ balm.config = {
     ],
     plugins: [new VueLoaderPlugin()],
     alias: {
-      vue$: 'vue/dist/vue.esm.js'
+      vue$: 'vue/dist/vue.esm.js',
+      '@': path.resolve(__dirname, 'app', 'scripts')
     }
   }
   // More Config
